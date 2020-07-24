@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/profpic"
+        android:layout_margin="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="24dp"
+        android:paddingTop="15dp"
+        android:text="@string/matric"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/logmatric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/text_field_clicked"
+            android:hint="121238902"
+            android:padding="15dp" />
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="24dp"
+            android:paddingTop="15dp"
+            android:text="@string/password"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:id="@+id/logpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:maxLines="1"
+                android:inputType="textPassword"
+
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/text_field_clicked"
+                android:hint="********"
+                android:padding="15dp" />
+            <ImageView
+                android:id="@+id/visibleimg"
+                android:layout_width="wrap_content"
+                android:onClick="passClick"
+                android:layout_height="wrap_content"
+                android:src="@drawable/visible"
+                android:layout_centerVertical="true"
+                android:paddingBottom="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="22dp"
+
+
+                />
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/logintoapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:layout_margin="12dp"
+            android:background="@drawable/button"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="15sp"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</RelativeLayout>
+</ScrollView>

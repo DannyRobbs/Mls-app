@@ -1,0 +1,204 @@
+<resources>
+    <string name="app_name">MLS</string>
+    <string name="anatomy_study_material">Anatomy</string>
+    <string name="physionogy_study_material">Physiology</string>
+    <string name="bioch_study_material">biochemistry</string>
+    <string name="micro_study_material">Microbiology</string>
+    <string name="haem_study_material">Haematology</string>
+    <string name="clin_study_material">Clinical Chemistry</string>
+    <string name="hist_study_material">HistoPathology</string>
+    <string name="ment_study_material">Mentoring</string>
+    <string name="gen_study_material">General Studies</string>
+    <string name="othee_study_material">Others</string>
+    <string name="fetch_result_for">Fetch Result for</string>
+    <string name="no_result_found">Oops! We could\'nt find any Results.</string>
+    <string name="default_password">Randomified</string>
+    <string name="Level200">200 Level</string>
+    <string name="Level300">300 Level</string>
+    <string name="Level400">400 Level</string>
+    <string name="Level500">500 Level</string>
+    <string name="alert">Alert!</string>
+    <string name="network_warning">Network Connection Required.</string>
+    <string name="okay">Okay</string>
+    <string name="type_register">Register</string>
+    <string name="type_uploadresult">uploadresult</string>
+    <string name="type_login">login</string>
+    <string name="type_fetch">fetch</string>
+    <string name="type_fetch_result">fetchresult</string>
+    <string name="first_name_empty_prompt">FIRST_NAME Field can not be empty.</string>
+    <string name="last_name_empty_prompt">LAST_NAME Field can not be empty.</string>
+    <string name="matric_empty_prompt">MATRIC Field can not be empty.</string>
+    <string name="email_empty_prompt">EMAIL Field can not be empty.</string>
+    <string name="password_empty_prompt">PASSWORD Field can not be empty.</string>
+    <string name="password_linked_error">A Password already linked to this user.</string>
+    <string name="label_empty_prompt">Label cannot be empty.</string>
+    <string name="level_empty_prompt">Level cannot be empty.</string>
+    <string name="field_empty_prompt">Fields cannot be empty.</string>
+    <string name="credit_text_for_icon8">All Credit for icons goes to the Makers of the
+Beautiful icons in the app.</string>
+    <string name="hype_text_for_icon8">What\'s that? Like what you see and you want to know more?</string>
+    <string name="click_here">Click here.</string>
+    <string name="version_number">Version 1.0.0</string>
+    <string name="about_badeggs">Badeggs Takes Full Credit For The Programmatic Build Of This Application And Still Thanks All Parties, Partly Or Wholly, Involved In Making The Project A Successful One.</string>
+    <string name="news_header">News</string>
+    <string name="portal_header">Portal</string>
+    <string name="select_an_image">Select an Image</string>
+    <string name="uploading_toast">Uploading...</string>
+    <string name="invalid_level">Invalid Level</string>
+    <string name="complaint_suggestion">Any Complaints/Suggestions?</string>
+    <string name="level"> Level</string>
+    <string name="label">Label</string>
+    <string name="login">Log-In</string>
+    <string name="matric">Matric</string>
+    <string name="portal">Portal</string>
+    <string name="results">Results</string>
+    <string name="study_material">Study Materials</string>
+    <string name="nimelssa_quiz">Nimelssa Quiz</string>
+    <string name="know_your_exco">Know Your Excos</string>
+    <string name="Contact">Contact Us</string>
+    <string name="firstname">FirstName</string>
+    <string name="surname">Surname</string>
+    <string name="e_mail">E-mail</string>
+    <string name="create">Create</string>
+    <string name="password">Password</string>
+    <string name="signup">Sign-Up</string>
+    <string name="label_hint">Haematology Incourse 20\'</string>
+    <string name="login_status">Login Status</string>
+    <string name="type_for_result_intent">image/*</string>
+    <string name="portal_url">https://studentportal.unilag.edu.ng/</string>
+    <string name="blogspot_url">https://nimelssascope.blogspot.com/?m=1</string>
+    <string name="mlscn_url">http://web.mlscn.gov.ng/index.php/category/news/</string>
+
+
+    <string name="name">Name: </string>
+    <string name="DOB">DOB: </string>
+    <string name="Level">Level: </string>
+    <string name="Post">Post: </string>
+    <string name="Religion">Religion: </string>
+    <string name="State">State: </string>
+    <string name="email">Email: </string>
+    <string name="remark">Remark: </string>
+    <string name="phone">Phone: </string>
+    <string name="ig">I.G: </string>
+
+
+    <string name="Acad_sec_name">Anoke Victor</string>
+    <string name="Acad_sec_DOB">18th March ****</string>
+    <string name="Acad_sec_Level">300L</string>
+    <string name="Acad_sec_Post">Academic Secretary</string>
+    <string name="Acad_sec_Religion">Christianity</string>
+    <string name="Acad_sec_State">Ebonyi</string>
+    <string name="Acad_sec_email">govicky.vb@gmail.com</string>
+    <string name="Acad_sec_remark">None</string>
+    <string name="Acad_sec_phone">09057171083</string>
+    <string name="Acad_sec_ig">kriz_vian</string>
+
+
+    <string name="Pro_name">Akinola Oluwaseyi Elizabeth</string>
+    <string name="Pro_DOB">5th October ****</string>
+    <string name="Pro_Level">300L</string>
+    <string name="Pro_Post">Public Relations Officer</string>
+    <string name="Pro_Religion">Christianity</string>
+    <string name="Pro_State">Ekiti</string>
+    <string name="Pro_email">akinolaseyi52@gmail.com</string>
+    <string name="Pro_remark">None</string>
+    <string name="Pro_phone">08185775862</string>
+    <string name="Pro_ig">_seyiii</string>
+
+
+    <string name="welfare_name">Ejike Nkiruka Francisca</string>
+    <string name="welfare_DOB">27th January ****</string>
+    <string name="welfare_Level">400L</string>
+    <string name="welfare_Post">Welfare Secretary</string>
+    <string name="welfare_Religion">Christianity</string>
+    <string name="welfare_State">Anambra</string>
+    <string name="welfare_email">ejikefrancisca27@gmail.com</string>
+    <string name="welfare_remark">None</string>
+    <string name="welfare_phone">08142677875</string>
+    <string name="welfare_ig">theloloobi</string>
+
+
+    <string name="vp_name">Omue Kelvin</string>
+    <string name="vp_DOB">6th September ****</string>
+    <string name="vp_Level">400L</string>
+    <string name="vp_Post">Vice President</string>
+    <string name="vp_Religion">Christianity</string>
+    <string name="vp_State">Delta</string>
+    <string name="vp_email">stephenkuye2010@yahoo.com</string>
+    <string name="vp_remark"> He that dwelleth in the secret place of the most high,shall abide under the shadow of the Almighty</string>
+    <string name="vp_phone">07011273821</string>
+    <string name="vp_ig">Nil</string>
+
+
+    <string name="Social_name">Promise Oyediya Anya</string>
+    <string name="Social_DOB">29th September ****</string>
+    <string name="Social_Level">300L</string>
+    <string name="Social_Post">Social Secretary</string>
+    <string name="Social_Religion">Christianity</string>
+    <string name="Social_State">Abia</string>
+    <string name="Social_email">promiseoyediya@gmail.com</string>
+    <string name="Social_remark">It Is What It Is</string>
+    <string name="Social_phone">08136725513</string>
+    <string name="Social_ig">oye_diyaa</string>
+
+
+    <string name="GS_name">Oguntona Ebunoluwa Abeke</string>
+    <string name="GS_DOB">16th May ****</string>
+    <string name="GS_Level">500L</string>
+    <string name="GS_Post">General Secretary</string>
+    <string name="GS_Religion">Christianity</string>
+    <string name="GS_State">Oyo</string>
+    <string name="GS_email">morenikaygee99@yahoo.com</string>
+    <string name="GS_remark">No matter how the Wind howls, the Mountains cannot bow to it.</string>
+    <string name="GS_phone">08186456196</string>
+    <string name="GS_ig">kayheet19</string>
+
+
+    <string name="Sport_sec_name">Anyogu Akachi Emmanuel</string>
+    <string name="Sport_sec_DOB">15th March ****</string>
+    <string name="Sport_sec_Level">300L</string>
+    <string name="Sport_sec_Post">Sport Secretary</string>
+    <string name="Sport_sec_Religion">Christianity</string>
+    <string name="Sport_sec_State">Abia</string>
+    <string name="Sport_sec_email">kachianyogu0@gmail.com</string>
+    <string name="Sport_sec_remark">None</string>
+    <string name="Sport_sec_phone">08021496109</string>
+    <string name="Sport_sec_ig">kachi_it</string>
+
+
+    <string name="Finsec_name">Ekuma Mba Samuel</string>
+    <string name="Finsec_DOB">19th June ****</string>
+    <string name="Finsec_Level">400L</string>
+    <string name="Finsec_Post">Financial Secretary</string>
+    <string name="Finsec_Religion">Christianity</string>
+    <string name="Finsec_State">Ebonyi</string>
+    <string name="Finsec_email">samuelekumamba@gmail.com</string>
+    <string name="Finsec_remark">Anything is Possible.</string>
+    <string name="Finsec_phone">09093488620</string>
+    <string name="Finsec_ig">EKUMA_SAM</string>
+
+
+    <string name="pre_name">Sobitan David</string>
+    <string name="pre_DOB">9th June ****</string>
+    <string name="pre_Level">500L</string>
+    <string name="pre_Post">President</string>
+    <string name="pre_Religion">Christianity</string>
+    <string name="pre_State">Ogun</string>
+    <string name="pre_email">sobitandavs@gmail.com</string>
+    <string name="pre_remark">On God.</string>
+    <string name="pre_phone">08187865882</string>
+    <string name="pre_ig">Femiartit</string>
+
+
+    <string name="AGS_name">Sotayo Timilehin Ayomide</string>
+    <string name="AGS_DOB">6th March ****</string>
+    <string name="AGS_Level">300L</string>
+    <string name="AGS_Post">Assistant General Secretary</string>
+    <string name="AGS_Religion">Christianity</string>
+    <string name="AGS_State">Ogun</string>
+    <string name="AGS_email">ayomidesotayo04@gmail.com</string>
+    <string name="AGS_remark">Whatever is worth doing at all, is worth doing well.</string>
+    <string name="AGS_phone">08140835850</string>
+    <string name="AGS_ig">timmy_sho</string>
+
+</resources>

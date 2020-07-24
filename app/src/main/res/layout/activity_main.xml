@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/demo"
+        android:layout_weight="9"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+
+        >
+    <Button
+        android:id="@+id/loginbut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:layout_gravity="center_vertical"
+        android:onClick="login"
+        android:background="@drawable/button"
+        android:layout_margin="24dp"
+        android:layout_weight="1"
+        />
+        <Button
+            android:id="@+id/loginbu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="dev-access"
+
+            android:layout_gravity="center_vertical"
+            android:onClick="free"
+            android:background="@drawable/button"
+            android:layout_margin="24dp"
+            android:layout_weight="1"
+            />
+
+    <Button
+        android:id="@+id/signupbut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:layout_gravity="center_vertical"
+        android:onClick="signup"
+        android:background="@drawable/button"
+        android:layout_margin="24dp"
+        android:layout_weight="1"
+        />
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#0090EA"
+        android:onClick="complain"
+        android:text="@string/complaint_suggestion"
+        android:layout_gravity="center_horizontal"
+        android:padding="15dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.mls">
+
+
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/demo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".podcasthome"
+            android:launchMode="singleTask"
+            ></activity>
+        <activity android:name=".podcastsplash"
+            android:noHistory="true"/>
+        <activity android:name=".excofullpage"
+            android:label="Excos"/>
+        <activity android:name=".newsActivity" />
+        <activity
+            android:name=".splashscreen"
+            android:noHistory="true">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".aboutus" />
+        <activity
+            android:name=".exco"
+            android:label="Excos" />
+        <activity
+            android:name=".Studymaterials"
+            android:label="Study Materials" />
+        <activity android:name=".fullscreen" />
+        <activity android:name=".webpage" />
+        <activity android:name=".levelinfo" />
+        <activity
+            android:name=".MainActivity"
+            android:icon="@drawable/demo" />
+        <activity
+            android:name=".signup"
+            android:label="Sign Up" />
+        <activity
+            android:name=".matric"
+            android:label="Get Info" />
+        <activity
+            android:name=".login"
+            android:label="Log In" />
+        <activity
+            android:name=".mainapp"
+            android:label="MLS" />
+        <activity
+            android:name=".resultView"
+            android:label="Results" />
+    </application>
+
+</manifest>

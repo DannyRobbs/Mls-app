@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:layout_height="match_parent"
+    tools:context=".newsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="#4fc3f7">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="nimelssa"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_in_main"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:layout_margin="15dp"
+            >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="nimelssa"
+                android:scaleType="fitCenter"
+                android:src="@drawable/local_news"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIMELSSA Blog"
+                android:gravity="center_vertical"
+                android:onClick="nimelssa"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:onClick="mlscn"
+            android:background="@drawable/button_in_main"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:layout_margin="15dp"
+            >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="mlscn"
+                android:scaleType="centerCrop"
+                android:src="@drawable/world_news"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="MLSCN News"
+                android:onClick="mlscn"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:background="#4fc3f7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:onClick="podcast"
+            android:background="@drawable/podcastdrawable"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:layout_margin="15dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="podcast"
+                android:scaleType="fitCenter"
+                android:src="@drawable/podcast"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="podcast"
+                android:text="Podcast"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    </LinearLayout>

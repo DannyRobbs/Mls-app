@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_margin="25dp"
+        android:layout_centerInParent="true"
+        android:hint="160708754"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:id="@+id/matricu"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/type_fetch"
+        android:layout_below="@+id/matricu"
+        android:background="@drawable/button"
+        android:id="@+id/fetch"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
+</ScrollView>

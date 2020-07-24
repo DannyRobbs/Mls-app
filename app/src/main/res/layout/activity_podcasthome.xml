@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#7e57c2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".podcasthome">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_in_main"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        >
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seek"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:0"
+            android:id="@+id/seekintend"
+            android:layout_gravity="left"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:0"
+            android:id="@+id/seekint"
+            android:layout_gravity="right"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/covid1"
+            android:onClick="first"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/play"
+
+            />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDuration="@android:integer/config_shortAnimTime"
+        android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:id="@+id/progresss1"/>
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:id="@+id/covid1st"
+        android:onClick="stop"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/stop"
+
+        />
+    </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Covid Chronicles EP-1"
+            android:gravity="center_vertical"
+            android:id="@+id/audiofile1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_in_main"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        >
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seek2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:0"
+            android:id="@+id/seekintend2"
+            android:layout_gravity="left"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:0"
+            android:id="@+id/seekint2"
+            android:layout_gravity="right"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/playbtn2"
+                android:onClick="second"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/play"
+
+                />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateDuration="@android:integer/config_shortAnimTime"
+                android:layout_weight="1"
+                android:id="@+id/progresss2"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/stopbtn2"
+                android:onClick="stop"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stop"
+
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Workers - Depression and Suicide"
+            android:gravity="center_vertical"
+            android:id="@+id/audiofile2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_in_main"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        >
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seek3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:0"
+            android:id="@+id/seekintend3"
+            android:layout_gravity="left"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:0"
+            android:id="@+id/seekint3"
+            android:layout_gravity="right"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/playbtn3"
+                android:onClick="third"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/play"
+
+                />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateDuration="@android:integer/config_shortAnimTime"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:id="@+id/progresss3"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/stopbtn3"
+                android:onClick="stop"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stop"
+
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Why We Snap!"
+            android:gravity="center_vertical"
+            android:id="@+id/audiofile3"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_in_main"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        >
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seek4"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:0"
+            android:id="@+id/seekintend4"
+            android:layout_gravity="left"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:0"
+            android:id="@+id/seekint4"
+            android:layout_gravity="right"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/playbtn4"
+                android:onClick="fourth"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/play"
+
+                />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateDuration="@android:integer/config_shortAnimTime"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:id="@+id/progresss4"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/stopbtn4"
+                android:onClick="stop"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stop"
+
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Covid Chronicles EP-2"
+            android:gravity="center_vertical"
+            android:id="@+id/audiofile4"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_in_main"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        >
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seek5"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:0"
+            android:id="@+id/seekintend5"
+            android:layout_gravity="left"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:0"
+            android:id="@+id/seekint5"
+            android:layout_gravity="right"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/playbtn5"
+                android:onClick="fifth"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/play"
+
+                />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateDuration="@android:integer/config_shortAnimTime"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:id="@+id/progresss5"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/stopbtn5"
+                android:onClick="stop"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stop"
+
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stories From the Front-lines"
+            android:gravity="center_vertical"
+            android:id="@+id/audiofile5"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-light"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
+
+
+</ScrollView>

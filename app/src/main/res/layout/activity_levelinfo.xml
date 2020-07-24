@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".levelinfo">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="24dp"
+        android:paddingTop="15dp"
+        android:text="@string/label"
+        android:layout_above="@+id/labelet"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+    <EditText
+        android:id="@+id/labelet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:maxLines="1"
+        android:inputType="text"
+        android:layout_above="@+id/levet"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/text_field_clicked"
+        android:hint="@string/label_hint"
+        android:padding="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="24dp"
+        android:paddingTop="15dp"
+        android:id="@+id/levet"
+        android:layout_centerVertical="true"
+        android:text="@string/level"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+    <EditText
+        android:id="@+id/levelet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/levet"
+        android:layout_marginLeft="15dp"
+        android:maxLines="1"
+        android:inputType="number"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/text_field_clicked"
+        android:hint="300"
+        android:padding="15dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        android:id="@+id/getlvl"
+        android:paddingRight="19dp"
+        android:drawableRight="@drawable/upload"
+
+        android:background="@drawable/floatingbut"
+        />
+
+</RelativeLayout>
