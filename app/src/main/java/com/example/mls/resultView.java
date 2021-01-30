@@ -13,12 +13,15 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,11 +35,13 @@ import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -49,19 +54,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class resultView extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<ResultItem>> {
-ListView list;
-static RecyclerView recycler;
-recycleradapter adapterr;
+public class resultView extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<ResultItem>>, recycleradapter.clicked {
+    ListView list;
+    static RecyclerView recycler;
+    recycleradapter adapterr;
+    FloatingActionButton floatingActionButton, fab2, fab3, fab4, fab5;
 
+    View lay;
+    RelativeLayout relativeLayout;
 
-View empt;
-static ArrayList<ResultItem> resultinfo = new ArrayList<>();
+    View empt;
+    static ArrayList<ResultItem> resultinfo = new ArrayList<>();
     private static final int picker = 1;
-    Button btn;
-    customAdapter adapter ;
+    FloatingActionButton btn;
+    customAdapter adapter;
     ByteArrayOutputStream byteArrayOutputStream;
-    byte [] bytes ;
+    byte[] bytes;
     ProgressBar prog;
     ArrayList<String> spinnerArray;
     Spinner lspin;
@@ -71,33 +79,73 @@ static ArrayList<ResultItem> resultinfo = new ArrayList<>();
     boolean ischecked = false;
     private NetworkInfo info;
     private ConnectivityManager cn;
+    StaggeredGridLayoutManager manager;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview);
+        getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Fresco.initialize(getApplicationContext());
-       // list = findViewById(R.id.listvieww);
+        // list = findViewById(R.id.listvieww);
         empt = findViewById(R.id.empty);
         context = this;
+        floatingActionButton = findViewById(R.id.fabn);
+        lay = findViewById(R.id.lay);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popup();
+            }
+        });
+        // list.setEmptyView(empt);
 
-       // list.setEmptyView(empt);
-
-
+        relativeLayout = findViewById(R.id.relative);
+        relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closepopup();
+            }
+        });
 
         recycler = findViewById(R.id.recycler);
-        adapterr = new recycleradapter(this,resultinfo);
+        recycler.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
+
+            @Override
+            public boolean onInterceptTouchEvent(RecyclerView recyclerView, MotionEvent motionEvent) {
+                if (motionEvent.getAction() != MotionEvent.ACTION_UP) {
+                    return false;
+                }
+                View child = recyclerView.findChildViewUnder(motionEvent.getX(), motionEvent.getY());
+                if (child != null) {
+                    // tapped on child
+                    return false;
+                } else {
+                    closepopup();
+                    return true;
+                }
+            }
+
+            @Override
+            public void onTouchEvent(RecyclerView recyclerView, MotionEvent motionEvent) {
+            }
+
+            @Override
+            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+
+            }
+        });
+        adapterr = new recycleradapter(this, resultinfo, this);
+        manager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        manager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS);
+        recycler.setLayoutManager(manager);
         recycler.setAdapter(adapterr);
-        recycler.setLayoutManager(new LinearLayoutManager(this));
 
 
-
-
-
-
-
-        wait= findViewById(R.id.waittv);
+        wait = findViewById(R.id.waittv);
         prog = findViewById(R.id.progb);
         btn = findViewById(R.id.fab);
         prog.setVisibility(View.GONE);
@@ -159,18 +207,18 @@ static ArrayList<ResultItem> resultinfo = new ArrayList<>();
         });*/
 
 
-        ArrayAdapter<String> spinner = new ArrayAdapter<String>(
-                this,android.R.layout.simple_spinner_dropdown_item,spinnerArray
+        final ArrayAdapter<String> spinner = new ArrayAdapter<String>(
+                this, android.R.layout.simple_spinner_dropdown_item, spinnerArray
         );
         spinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        lspin =(Spinner)findViewById(R.id.spinners);
+        lspin = (Spinner) findViewById(R.id.spinners);
         lspin.setAdapter(spinner);
         lspin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ischecked = true;
-                m.restartLoader(1,null,resultView.this);
+             /*   ischecked = true;
+                m.restartLoader(1,null,resultView.this);*/
             }
 
             @Override
@@ -178,23 +226,77 @@ static ArrayList<ResultItem> resultinfo = new ArrayList<>();
 
             }
         });
-
+        fab2 = findViewById(R.id.fab2);
+        fab3 = findViewById(R.id.fab3);
+        fab4 = findViewById(R.id.fab4);
+        fab5 = findViewById(R.id.fab5);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lspin.setSelection(spinner.getPosition(getString(R.string.Level200)));
+                ischecked = true;
+                m.restartLoader(1, null, resultView.this);
+                closepopup();
+            }
+        });
+        fab3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lspin.setSelection(spinner.getPosition(getString(R.string.Level300)));
+                ischecked = true;
+                m.restartLoader(1, null, resultView.this);
+                closepopup();
+            }
+        });
+        fab4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lspin.setSelection(spinner.getPosition(getString(R.string.Level400)));
+                ischecked = true;
+                m.restartLoader(1, null, resultView.this);
+                closepopup();
+            }
+        });
+        fab5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lspin.setSelection(spinner.getPosition(getString(R.string.Level500)));
+                ischecked = true;
+                m.restartLoader(1, null, resultView.this);
+                closepopup();
+            }
+        });
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // transformimage(bytes);
-               // resultpage();
-                Intent tent = new Intent(getApplicationContext(),levelinfo.class);
-             startActivity(tent);
-             finish();
+                // transformimage(bytes);
+                // resultpage();
+                Intent tent = new Intent(getApplicationContext(), levelinfo.class);
+                startActivity(tent);
+                // finish();
 
-              //  fetchresults();
+                //  fetchresults();
             }
         });
 
 
     }
+
+    private void popup() {
+        if (lay.getVisibility() == View.VISIBLE) {
+            lay.setVisibility(View.GONE);
+        } else {
+            lay.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void closepopup() {
+        if (lay.getVisibility() == View.VISIBLE) {
+            lay.setVisibility(View.GONE);
+        }
+    }
+
     public String createImageFromBitmap(Bitmap bitmap) {
         String fileName = "myImage";//no .png or .jpg needed
         try {
@@ -312,8 +414,8 @@ static ArrayList<ResultItem> resultinfo = new ArrayList<>();
        // int itemPosition = recycler.getChildPosition(v);
         String s =resultinfo.get(p).getBtm().toString();
         Log.e("mkmkmkm",s);
-        Intent i = new Intent(c,fullscreen.class);
-        i.putExtra("uri",s );
+        Intent i = new Intent(c, fullscreen.class);
+        i.putExtra("uri", s);
         c.startActivity(i);
     }
 
@@ -322,15 +424,15 @@ static ArrayList<ResultItem> resultinfo = new ArrayList<>();
         adapter.clear();
 
     }
-   /* class MyOnClickListener implements View.OnClickListener {
-        @Override
-        public void onClick(View v) {
-            int itemPosition = recycler.getChildPosition(v);
-            String s =resultinfo.get(itemPosition).getBtm().toString();
-            //full(s);
 
-        }
+    @Override
+    public void itemclicked() {
+        closepopup();
+    }
 
-
-    }*/
+    @Override
+    protected void onResume() {
+        super.onResume();
+        closepopup();
+    }
 }

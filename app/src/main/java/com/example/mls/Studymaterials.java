@@ -6,13 +6,17 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 
 public class Studymaterials extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_studymaterials);
+        setContentView(R.layout.new_studymaterials);
+        getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
     public void anatomy(View v){
         Uri webpage = Uri.parse("https://drive.google.com/folderview?id=17wFGOBRPqNF6B1l4qcdHmorxd520teT4");

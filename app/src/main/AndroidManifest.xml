@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mls">
 
-
-
     <dist:module dist:instant="true" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -20,13 +19,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".podcasthome"
-            android:launchMode="singleTask"
-            ></activity>
-        <activity android:name=".podcastsplash"
-            android:noHistory="true"/>
-        <activity android:name=".excofullpage"
-            android:label="Excos"/>
+        <activity android:name=".GetStarted"></activity>
+        <activity
+            android:name=".podcasthome"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".podcastsplash"
+            android:noHistory="true" />
+        <activity
+            android:name=".excofullpage"
+            android:label="Excos" />
         <activity android:name=".newsActivity" />
         <activity
             android:name=".splashscreen"

@@ -1,72 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative"
+    android:background="#eaeaea"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Spinner
+        android:id="@+id/spinners"
+        android:layout_weight="5"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#eeeeee"
-        android:id="@+id/rad"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="5">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/fetch_result_for"
-                android:textSize="15sp"
-                android:padding="15dp"
-                android:textColor="#000000"
-                android:shadowColor="#bce"
-                />
+        android:paddingLeft="15dp" />
 
-        </LinearLayout>
-        <Spinner
-            android:id="@+id/spinners"
-            android:layout_weight="5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="15dp"
-            />
-
-    </LinearLayout>
-   <!-- <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listvieww"
-        android:layout_below="@+id/rad"
-        android:dividerHeight="2dp"/>-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/empty"
+        android:visibility="gone"
+        android:background="#ffffff"
         android:orientation="vertical">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/emptyy"
+            android:src="@drawable/blood"
             android:layout_centerInParent="true"
             android:id="@+id/emptyimg"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitCenter" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/emptyimg"
-            android:text="@string/no_result_found"
-            android:layout_centerHorizontal="true"
-            android:textColor="#000000"
-            android:shadowColor="#bce"
-            />
+        <!--  <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/emptyimg"
+              android:text="@string/no_result_found"
+              android:layout_centerHorizontal="true"
+              android:textColor="#000000"
+              android:shadowColor="#bce"
+              />-->
     </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/recycler"
-        android:layout_below="@+id/rad"/>
+        android:layout_margin="20dp" />
 
 
     <ProgressBar
@@ -81,12 +61,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/progb"
         android:id="@+id/waittv"
-        android:text="This may take 2-3 minutes."
+        android:text="This may take a minute."
         android:layout_centerHorizontal="true"
         android:textColor="#000000"
         android:shadowColor="#bce"
         />
-    <Button
+    <!--<Button
         android:layout_width="45dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -97,11 +77,135 @@
         android:drawableRight="@drawable/entre"
 
         android:background="@drawable/floatingbut"
-        />
-        android:layout_alignParentBottom="true"
+        />-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cloud"
+        style="@style/Widget.Design.FloatingActionButton"
         android:layout_alignParentRight="true"
-        />
+        android:layout_alignParentBottom="true"
+        app:fabSize="normal"
+        android:id="@+id/fab"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom|right"
+        android:backgroundTint="#ffeffb"
+        android:background="#ffeffb"
+        app:borderWidth="0dp"
+        android:elevation="2dp"
+        app:rippleColor="#000000" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/numbers"
+        style="@style/Widget.Design.FloatingActionButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        app:fabSize="normal"
+        android:id="@+id/fabn"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom|right"
+        android:backgroundTint="#dfdeee"
+        android:background="#dfdeee"
+        app:borderWidth="0dp"
+        android:elevation="2dp"
+        app:rippleColor="#000000" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fabn"
+        android:visibility="visible"
+        android:id="@+id/lay"
+
+        android:orientation="vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/number5"
+            android:id="@+id/fab5"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            app:fabSize="mini"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom|right"
+            android:backgroundTint="#eeeeee"
+            android:background="#eeeeee"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            android:elevation="2dp"
+            app:rippleColor="#000000" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/number4"
+            android:id="@+id/fab4"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            app:fabSize="mini"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom|right"
+            android:backgroundTint="#eeeeee"
+            android:background="#eeeeee"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            android:elevation="2dp"
+            app:rippleColor="#000000" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/number3"
+            android:id="@+id/fab3"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            app:fabSize="mini"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom|right"
+            android:backgroundTint="#eeeeee"
+            android:background="#eeeeee"
+            app:borderWidth="0dp"
+            android:elevation="2dp"
+            app:elevation="0dp"
+            app:rippleColor="#000000" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/number2"
+            android:id="@+id/fab2"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            app:fabSize="mini"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom|right"
+            android:backgroundTint="#eeeeee"
+            android:background="#eeeeee"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            android:elevation="0dp"
+            app:rippleColor="#000000" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>

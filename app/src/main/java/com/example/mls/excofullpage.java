@@ -8,34 +8,51 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class excofullpage extends AppCompatActivity {
     ImageView excoimg;
-    TextView nametv;TextView dobtv;TextView lvltv;TextView posttv;
-    TextView statetv;TextView relitv;TextView emailtv;TextView phonetv;
-    TextView igtv;TextView nremtv;
+    TextView nametv;
+    TextView dobtv;
+    TextView lvltv;
+    TextView posttv;
+    TextView statetv;
+    TextView relitv;
+    TextView emailtv;
+    TextView phonetv;
+    TextView igtv;
+    TextView nremtv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_excofullpage);
+        getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.new_excofull);
         excoimg = findViewById(R.id.excoimgv);
-        nametv = findViewById(R.id.exconametv);dobtv = findViewById(R.id.excodobtv);lvltv = findViewById(R.id.excolvltv);
-        posttv = findViewById(R.id.excoposttv); statetv = findViewById(R.id.excostatetv); relitv = findViewById(R.id.excorelitv);
-        emailtv = findViewById(R.id.excoemailtv); phonetv = findViewById(R.id.excophnetv); igtv = findViewById(R.id.excoigtv);
+        nametv = findViewById(R.id.exconametv);
+        dobtv = findViewById(R.id.excodobtv);
+        lvltv = findViewById(R.id.excolvltv);
+        posttv = findViewById(R.id.excoposttv);
+        statetv = findViewById(R.id.excostatetv);
+        relitv = findViewById(R.id.excorelitv);
+        emailtv = findViewById(R.id.excoemailtv);
+        phonetv = findViewById(R.id.excophnetv);
+        igtv = findViewById(R.id.excoigtv);
         nremtv = findViewById(R.id.excoremtv);
         Intent i = getIntent();
-        String m = i.getStringExtra("post");
-        filldata(m);
+        filldata(sharedData.getMyexco());
     }
 
-    public void filldata(String s){
-        switch(s){
+    public void filldata(excoitem s) {
+        /*switch(s){
             case "vp":
                 Bitmap bit = BitmapFactory.decodeResource(getResources(),R.drawable.vp_photo);
                 excoimg.setImageBitmap(bit);
@@ -186,6 +203,18 @@ public class excofullpage extends AppCompatActivity {
             default:
                 break;
 
-        }
+        }*/
+        excoimg.setImageBitmap(s.getBtm());
+        nametv.setText(s.getName());
+        dobtv.setText(s.getDob());
+        lvltv.setText(s.getLevel());
+        posttv.setText(s.getPosition());
+        statetv.setText(s.getState());
+        relitv.setText(s.getReligion());
+        emailtv.setText(s.getEmail());
+        phonetv.setText(s.getPhone());
+        igtv.setText(s.getIG());
+        nremtv.setText(s.getRemark());
+
     }
 }

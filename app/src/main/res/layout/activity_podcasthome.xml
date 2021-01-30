@@ -10,405 +10,630 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="#7e57c2"
+    android:background="#ffffff"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".podcasthome">
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:gravity="center"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_in_main"
-        android:orientation="vertical"
-        android:padding="15dp"
-        android:layout_margin="15dp"
-        >
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/seek"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0:0"
-            android:id="@+id/seekintend"
-            android:layout_gravity="left"
-            android:textSize="9sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0:0"
-            android:id="@+id/seekint"
-            android:layout_gravity="right"
-            android:textSize="9sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-        <ImageView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:id="@+id/covid1"
-            android:onClick="first"
             android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
-            android:src="@drawable/play"
+            android:orientation="vertical">
 
-            />
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:indeterminateDuration="@android:integer/config_shortAnimTime"
-        android:layout_centerInParent="true"
-        android:layout_weight="1"
-        android:id="@+id/progresss1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frank Sweeny"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
 
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/seek"
+                android:layout_marginRight="10dp" />
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:id="@+id/covid1st"
-        android:onClick="stop"
-        android:layout_height="wrap_content"
-        android:scaleType="fitCenter"
-        android:src="@drawable/stop"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:0"
+                android:id="@+id/seekintend"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
 
-        />
-    </LinearLayout>
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Covid Chronicles EP-1"
+                android:id="@+id/audiofile1"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The worldwide spread of COVID-19 is being called the “pandemic of the century” by some. Others are watching the debacle unfold can only wonder if the response to the COVID-19 pandemic will someday be called “the fiasco of the century.”"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Covid Chronicles EP-1"
-            android:gravity="center_vertical"
-            android:id="@+id/audiofile1"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/button_in_main"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:id="@+id/covid1"
+                android:onClick="first"
+                android:layout_margin="10dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/play"
+
+                />
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:indeterminateDuration="@android:integer/config_shortAnimTime"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:id="@+id/progresss1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:id="@+id/covid1st"
+                android:onClick="stop"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stop"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:0"
+                android:gravity="center"
+                android:id="@+id/seekint"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:textColor="#212121"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-light" />
+        </LinearLayout>
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:gravity="center"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_in_main"
-        android:orientation="vertical"
-        android:padding="15dp"
-        android:layout_margin="15dp"
-        >
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/seek2"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0:0"
-            android:id="@+id/seekintend2"
-            android:layout_gravity="left"
-            android:textSize="9sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0:0"
-            android:id="@+id/seekint2"
-            android:layout_gravity="right"
-            android:textSize="9sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nora Taranto"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/seek2"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:0"
+                android:id="@+id/seekintend2"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health Workers - Depression and Suicide"
+                android:gravity="center_vertical"
+                android:id="@+id/audiofile2"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Physician suicide is a problem. There, we said it. Some of us (probably more than you’d think) have lost someone meaningful to suicide. And yet, we don’t talk about suicide and mental health in medicine, or at least, not enough. "
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/button_in_main"
+            android:orientation="vertical">
+
             <ImageView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="50dp"
                 android:id="@+id/playbtn2"
                 android:onClick="second"
-                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_height="50dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/play"
 
                 />
+
             <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:indeterminateDuration="@android:integer/config_shortAnimTime"
-                android:layout_weight="1"
-                android:id="@+id/progresss2"/>
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:id="@+id/progresss2"
+                android:visibility="gone" />
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="50dp"
                 android:id="@+id/stopbtn2"
                 android:onClick="stop"
-                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:layout_height="50dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/stop"
 
                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:0"
+                android:gravity="center"
+                android:id="@+id/seekint2"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:textColor="#212121"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-light" />
         </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Health Workers - Depression and Suicide"
-            android:gravity="center_vertical"
-            android:id="@+id/audiofile2"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
 
     </LinearLayout>
 
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:gravity="center"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_in_main"
-        android:orientation="vertical"
-        android:padding="15dp"
-        android:layout_margin="15dp"
-        >
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/seek3"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0:0"
-            android:id="@+id/seekintend3"
-            android:layout_gravity="left"
-            android:textSize="9sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0:0"
-            android:id="@+id/seekint3"
-            android:layout_gravity="right"
-            android:textSize="9sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frank Sweeny with R. Doug Fields"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/seek3"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:0"
+                android:id="@+id/seekintend3"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Why We Snap!"
+                android:gravity="center_vertical"
+                android:id="@+id/audiofile3"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Every day we hear about otherwise law-abiding citizens with no history of mental illness or violence that snap and commit savage, senseless, and brutal acts of violence for seemingly trivial provocation. What caused them to snap?"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/button_in_main"
+            android:orientation="vertical">
+
             <ImageView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="50dp"
                 android:id="@+id/playbtn3"
                 android:onClick="third"
-                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_height="50dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/play"
 
                 />
+
             <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:indeterminateDuration="@android:integer/config_shortAnimTime"
                 android:layout_centerInParent="true"
-                android:layout_weight="1"
-                android:id="@+id/progresss3"/>
+                android:layout_margin="10dp"
+                android:id="@+id/progresss3"
+                android:visibility="gone" />
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="50dp"
                 android:id="@+id/stopbtn3"
                 android:onClick="stop"
-                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:layout_height="50dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/stop"
 
                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:0"
+                android:gravity="center"
+                android:id="@+id/seekint3"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:textColor="#212121"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-light" />
         </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Why We Snap!"
-            android:gravity="center_vertical"
-            android:id="@+id/audiofile3"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
 
     </LinearLayout>
 
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:gravity="center"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_in_main"
-        android:orientation="vertical"
-        android:padding="15dp"
-        android:layout_margin="15dp"
-        >
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/seek4"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0:0"
-            android:id="@+id/seekintend4"
-            android:layout_gravity="left"
-            android:textSize="9sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0:0"
-            android:id="@+id/seekint4"
-            android:layout_gravity="right"
-            android:textSize="9sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frank Sweeny"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/seek4"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:0"
+                android:id="@+id/seekintend4"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Covid Chronicles EP-2"
+                android:gravity="center_vertical"
+                android:id="@+id/audiofile4"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A novel bat coronavirus first appears in Wuhan, China in late November of 2019. This family of coronaviruses normally reside in bats living in caves 1000 miles south of Wuhan. Understanding where the virus came from and how it entered the human reservoir will help prevent a similar pandemic in the future."
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/button_in_main"
+            android:orientation="vertical">
+
             <ImageView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="50dp"
                 android:id="@+id/playbtn4"
                 android:onClick="fourth"
-                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_height="50dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/play"
 
                 />
+
             <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:indeterminateDuration="@android:integer/config_shortAnimTime"
                 android:layout_centerInParent="true"
-                android:layout_weight="1"
-                android:id="@+id/progresss4"/>
+                android:layout_margin="10dp"
+                android:id="@+id/progresss4"
+                android:visibility="gone" />
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="50dp"
                 android:id="@+id/stopbtn4"
                 android:onClick="stop"
-                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:layout_height="50dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/stop"
 
                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:0"
+                android:gravity="center"
+                android:id="@+id/seekint4"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:textColor="#212121"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-light" />
         </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Covid Chronicles EP-2"
-            android:gravity="center_vertical"
-            android:id="@+id/audiofile4"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
 
     </LinearLayout>
-
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:gravity="center"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_in_main"
-        android:orientation="vertical"
-        android:padding="15dp"
-        android:layout_margin="15dp"
-        >
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/seek5"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0:0"
-            android:id="@+id/seekintend5"
-            android:layout_gravity="left"
-            android:textSize="9sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0:0"
-            android:id="@+id/seekint5"
-            android:layout_gravity="right"
-            android:textSize="9sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Justin Berk"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/seek5"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:0"
+                android:id="@+id/seekintend5"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stories From the Front-lines"
+                android:gravity="center_vertical"
+                android:id="@+id/audiofile5"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed-light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="“The main emotion that I was having during the early, and now evolving, stages of the epidemic was a real sense of pride and belonging to a community that is approaching this epidemic with knowledge, with empathy, and with calmness.”"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/button_in_main"
+            android:orientation="vertical">
+
             <ImageView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="50dp"
                 android:id="@+id/playbtn5"
                 android:onClick="fifth"
-                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_height="50dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/play"
 
                 />
+
             <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:indeterminateDuration="@android:integer/config_shortAnimTime"
                 android:layout_centerInParent="true"
-                android:layout_weight="1"
-                android:id="@+id/progresss5"/>
+                android:layout_margin="10dp"
+                android:id="@+id/progresss5"
+                android:visibility="gone" />
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="50dp"
                 android:id="@+id/stopbtn5"
                 android:onClick="stop"
-                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:layout_height="50dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/stop"
 
                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:0"
+                android:gravity="center"
+                android:id="@+id/seekint5"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:textColor="#212121"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-light" />
         </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Stories From the Front-lines"
-            android:gravity="center_vertical"
-            android:id="@+id/audiofile5"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-light"/>
 
     </LinearLayout>
-
-
-
-
 
 
 </LinearLayout>

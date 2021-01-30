@@ -60,6 +60,8 @@ Beautiful icons in the app.</string>
     <string name="surname">Surname</string>
     <string name="e_mail">E-mail</string>
     <string name="create">Create</string>
+    <string name="createaccount"><u>Create an Account</u></string>
+    <string name="existinguser"><u>Take me to Sign-in Page.</u></string>
     <string name="password">Password</string>
     <string name="signup">Sign-Up</string>
     <string name="label_hint">Haematology Incourse 20\'</string>
@@ -94,7 +96,7 @@ Beautiful icons in the app.</string>
     <string name="Acad_sec_ig">kriz_vian</string>
 
 
-    <string name="Pro_name">Akinola Oluwaseyi Elizabeth</string>
+    <string name="Pro_name">Akinola Oluwaseyi</string>
     <string name="Pro_DOB">5th October ****</string>
     <string name="Pro_Level">300L</string>
     <string name="Pro_Post">Public Relations Officer</string>
@@ -106,7 +108,7 @@ Beautiful icons in the app.</string>
     <string name="Pro_ig">_seyiii</string>
 
 
-    <string name="welfare_name">Ejike Nkiruka Francisca</string>
+    <string name="welfare_name">Ejike Nkiruka</string>
     <string name="welfare_DOB">27th January ****</string>
     <string name="welfare_Level">400L</string>
     <string name="welfare_Post">Welfare Secretary</string>
@@ -130,7 +132,7 @@ Beautiful icons in the app.</string>
     <string name="vp_ig">Nil</string>
 
 
-    <string name="Social_name">Promise Oyediya Anya</string>
+    <string name="Social_name">Promise Oyediya</string>
     <string name="Social_DOB">29th September ****</string>
     <string name="Social_Level">300L</string>
     <string name="Social_Post">Social Secretary</string>
@@ -142,7 +144,7 @@ Beautiful icons in the app.</string>
     <string name="Social_ig">oye_diyaa</string>
 
 
-    <string name="GS_name">Oguntona Ebunoluwa Abeke</string>
+    <string name="GS_name">Oguntona Ebunoluwa</string>
     <string name="GS_DOB">16th May ****</string>
     <string name="GS_Level">500L</string>
     <string name="GS_Post">General Secretary</string>
@@ -154,7 +156,7 @@ Beautiful icons in the app.</string>
     <string name="GS_ig">kayheet19</string>
 
 
-    <string name="Sport_sec_name">Anyogu Akachi Emmanuel</string>
+    <string name="Sport_sec_name">Anyogu Akachi</string>
     <string name="Sport_sec_DOB">15th March ****</string>
     <string name="Sport_sec_Level">300L</string>
     <string name="Sport_sec_Post">Sport Secretary</string>
@@ -166,7 +168,7 @@ Beautiful icons in the app.</string>
     <string name="Sport_sec_ig">kachi_it</string>
 
 
-    <string name="Finsec_name">Ekuma Mba Samuel</string>
+    <string name="Finsec_name">Ekuma Mba</string>
     <string name="Finsec_DOB">19th June ****</string>
     <string name="Finsec_Level">400L</string>
     <string name="Finsec_Post">Financial Secretary</string>
@@ -190,7 +192,7 @@ Beautiful icons in the app.</string>
     <string name="pre_ig">Femiartit</string>
 
 
-    <string name="AGS_name">Sotayo Timilehin Ayomide</string>
+    <string name="AGS_name">Sotayo Timilehin</string>
     <string name="AGS_DOB">6th March ****</string>
     <string name="AGS_Level">300L</string>
     <string name="AGS_Post">Assistant General Secretary</string>

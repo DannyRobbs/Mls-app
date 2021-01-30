@@ -111,15 +111,15 @@ public class userVerify extends AsyncTask<String,String,String> {
                 e.printStackTrace();
                 Log.e("flickerror", e.toString());
             }*/
-           if (!resultmessage.equalsIgnoreCase("'null'")){
+           if (!resultmessage.equalsIgnoreCase("invalid matric or password")) {
                for (int j = 8; j < resultmessage.length(); j++) {
-                   if(resultmessage.charAt(j) == ':'){
+                   if (resultmessage.charAt(j) == ':') {
 
                        String name = "";
                        j++;
                        j++;
-                       while(resultmessage.charAt(j)!= '"' ){
-                           name+=resultmessage.charAt(j);
+                       while (resultmessage.charAt(j) != '"') {
+                           name += resultmessage.charAt(j);
 
                            j++;
                            fetchint++;
@@ -197,8 +197,8 @@ public class userVerify extends AsyncTask<String,String,String> {
             String username = strings[1];
             String password = strings[2];
             try {
-                URL url = new URL("https://rottenegg.000webhostapp.com/login.php");
-                HttpURLConnection urlConnection =(HttpURLConnection) url.openConnection();
+                URL url = new URL("https://rotteneggs1.000webhostapp.com/login.php");
+                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);
                 urlConnection.setDoOutput(true);
@@ -238,8 +238,8 @@ public class userVerify extends AsyncTask<String,String,String> {
             String password = strings[6];
 
             try {
-                URL url = new URL("https://rottenegg.000webhostapp.com/register.php");
-                HttpURLConnection urlConnection =(HttpURLConnection) url.openConnection();
+                URL url = new URL("https://rotteneggs1.000webhostapp.com/register.php");
+                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);
                 urlConnection.setDoOutput(true);
@@ -276,14 +276,14 @@ public class userVerify extends AsyncTask<String,String,String> {
             counter =3;
             String username = strings[1];
             try {
-                URL url = new URL("https://rottenegg.000webhostapp.com/fetch.php");
-                HttpURLConnection urlConnection =(HttpURLConnection) url.openConnection();
+                URL url = new URL("https://rotteneggs1.000webhostapp.com/fetch.php");
+                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);
                 urlConnection.setDoOutput(true);
                 OutputStream output = urlConnection.getOutputStream();
-                BufferedWriter bf = new BufferedWriter(new OutputStreamWriter(output , "UTF-8"));
-                String postdata = URLEncoder.encode("user_name" , "UTF-8")+ "="+URLEncoder.encode(username,"UTF-8");
+                BufferedWriter bf = new BufferedWriter(new OutputStreamWriter(output, "UTF-8"));
+                String postdata = URLEncoder.encode("matric", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8");
                 bf.write(postdata);
                 bf.flush();
                 bf.close();
@@ -315,8 +315,8 @@ public class userVerify extends AsyncTask<String,String,String> {
 
             try {
                 //resulttable
-                URL url = new URL("https://rottenegg.000webhostapp.com/resulttable.php");
-                HttpURLConnection urlConnection =(HttpURLConnection) url.openConnection();
+                URL url = new URL("https://rotteneggs1.000webhostapp.com/resulttable.php");
+                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);
                 urlConnection.setDoOutput(true);
@@ -358,19 +358,58 @@ public class userVerify extends AsyncTask<String,String,String> {
                 urlConnection.setDoInput(true);
                 urlConnection.setDoOutput(true);
                 OutputStream output = urlConnection.getOutputStream();
-                BufferedWriter bf = new BufferedWriter(new OutputStreamWriter(output , "UTF-8"));
-                String postdata = URLEncoder.encode("level" , "UTF-8")+ "="+URLEncoder.encode(bytes,"UTF-8");
+                BufferedWriter bf = new BufferedWriter(new OutputStreamWriter(output, "UTF-8"));
+                String postdata = URLEncoder.encode("level", "UTF-8") + "=" + URLEncoder.encode(bytes, "UTF-8");
                 bf.write(postdata);
                 bf.flush();
                 bf.close();
                 InputStream input = urlConnection.getInputStream();
-                BufferedReader bb = new BufferedReader(new InputStreamReader(input,"iso-8859-1"));
+                BufferedReader bb = new BufferedReader(new InputStreamReader(input, "iso-8859-1"));
                 StringBuilder build = new StringBuilder();
 
                 String line;
                 line = bb.readLine();
-                while(line !=null){
-                    result+=line;
+                while (line != null) {
+                    result += line;
+                    line = bb.readLine();
+                }
+                input.close();
+                bb.close();
+                return result.toString();
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        } else if (type.equalsIgnoreCase("update")) {
+            counter = 6;
+            String matric = strings[1];
+            String upload = strings[2];
+            String download = strings[3];
+
+            try {
+                URL url = new URL("https://rotteneggs1.000webhostapp.com/update.php");
+                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection.setRequestMethod("POST");
+                urlConnection.setDoInput(true);
+                urlConnection.setDoOutput(true);
+                OutputStream output = urlConnection.getOutputStream();
+                BufferedWriter bf = new BufferedWriter(new OutputStreamWriter(output, "UTF-8"));
+                String postdata = URLEncoder.encode("matric", "UTF-8") + "=" + URLEncoder.encode(matric, "UTF-8") + "&" +
+                        URLEncoder.encode("uploads", "UTF-8") + "=" + URLEncoder.encode(upload, "UTF-8") + "&" +
+                        URLEncoder.encode("downloads", "UTF-8") + "=" + URLEncoder.encode(download, "UTF-8");
+                bf.write(postdata);
+                bf.flush();
+                bf.close();
+                InputStream input = urlConnection.getInputStream();
+                BufferedReader bb = new BufferedReader(new InputStreamReader(input, "iso-8859-1"));
+                StringBuilder build = new StringBuilder();
+
+                String line;
+                line = bb.readLine();
+                while (line != null) {
+                    result += line;
                     line = bb.readLine();
                 }
                 input.close();

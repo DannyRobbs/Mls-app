@@ -10,6 +10,7 @@ import androidx.loader.content.Loader;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -21,6 +22,7 @@ import android.text.Editable;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
@@ -62,6 +64,7 @@ public class levelinfo extends AppCompatActivity {
     android.app.LoaderManager man;
     EditText label;
     EditText level;
+    SharedPreferences preferences;
     String downloadURL;
     FirebaseStorage storage;
     StorageReference storageReference;
@@ -72,8 +75,12 @@ public class levelinfo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_levelinfo);
+        setContentView(R.layout.new_uploadpage);
+        getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         btn = findViewById(R.id.getlvl);
+        preferences = getSharedPreferences(sharedData.getInfokey(), MODE_PRIVATE);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
@@ -94,8 +101,16 @@ public class levelinfo extends AppCompatActivity {
                 String n = level.getText().toString().trim();
                 if(n!=null && !n.equalsIgnoreCase("")){
                     n=label.getText().toString().trim();
-                    if(n!=null && !n.equalsIgnoreCase("")){
+                    if(n!=null && !n.equalsIgnoreCase("")) {
                         resultpage();
+                        int upload = Integer.parseInt(preferences.getString("uploads", "0"));
+                        upload += 1;
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("uploads", String.valueOf(upload));
+                        editor.apply();
+                        userVerify u = new userVerify(levelinfo.this);
+                        u.execute("update", preferences.getString("matric", "0"), preferences.getString("uploads", "0"), preferences.getString("downloads", "0"));
+
                     }
                     else{
                         Toast.makeText(getApplicationContext(),getString(R.string.label_empty_prompt),Toast.LENGTH_SHORT).show();
@@ -272,14 +287,19 @@ resultView res = new resultView(resultinfo);
                     int height = image.getHeight();
 
                     float bitmapRatio = (float) width / (float) height;
-                    if (bitmapRatio > 1) {
-                        width = maxSize;
-                        height = (int) (width / bitmapRatio);
-                    } else {
-                        height = maxSize;
-                        width = (int) (height * bitmapRatio);
-                    }
+        if (bitmapRatio > 1) {
+            width = maxSize;
+            height = (int) (width / bitmapRatio);
+        } else {
+            height = maxSize;
+            width = (int) (height * bitmapRatio);
+        }
 
-                    return Bitmap.createScaledBitmap(image, width, height, true);
-                }
-            }
+        return Bitmap.createScaledBitmap(image, width, height, true);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+}

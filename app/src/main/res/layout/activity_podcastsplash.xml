@@ -2,15 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/layoutsplash"
-    android:background="#7e57c2"
+    android:background="#fddb31"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/podcast"
+        android:src="@drawable/podsplash"
         android:id="@+id/splashscreen"
+        android:scaleType="fitCenter"
         android:layout_centerInParent="true"/>
     <TextView
         android:layout_width="wrap_content"
@@ -20,7 +21,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:padding="15dp"
-        android:textColor="#f1c40f"
+        android:textColor="#a72fe9"
         android:textStyle="bold"
         android:fontFamily="sans-serif-condensed-light"/>
 

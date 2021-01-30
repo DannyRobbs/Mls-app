@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:fillViewport="true"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eee7f7"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/analyze" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingBottom="5dp"
+                    android:layout_margin="10dp"
+                    android:text="Let's analyze your data together."
+                    android:textColor="#777777"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:id="@+id/lay">
+
+                    <EditText
+                        android:id="@+id/matricu"
+                        android:layout_width="0dp"
+                        android:layout_weight="7"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:maxLines="1"
+                        android:layout_gravity="center"
+                        android:inputType="number"
+                        android:layout_marginRight="15dp"
+                        android:hint="Matric"
+                        android:textSize="12sp"
+                        android:padding="10dp" />
+
+                    <ProgressBar
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:padding="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/progress" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:id="@+id/fetch"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:padding="15dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/login_main_btn"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_margin="20dp"
+        android:id="@+id/backarrow"
+        android:src="@drawable/ic_action_name" />
+</RelativeLayout>

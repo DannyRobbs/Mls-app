@@ -30,11 +30,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class fetchloader extends AsyncTaskLoader<List<ResultItem>> {
-String check;
+    String check, firstname, lastname, matric, level, email, password, type;
+
     public fetchloader(@NonNull Context context, String c) {
 
-        super(context);check = c;
+        super(context);
+        check = c;
     }
+
 
     @Override
     protected void onStartLoading() {
@@ -49,8 +52,8 @@ String check;
         String result = "";
 
         try {
-            URL url = new URL("https://rottenegg.000webhostapp.com/ffetch.php");
-            HttpURLConnection urlConnection =(HttpURLConnection) url.openConnection();
+            URL url = new URL("https://rotteneggs1.000webhostapp.com/ffetch.php");
+            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("POST");
             urlConnection.setDoInput(true);
             urlConnection.setDoOutput(true);
@@ -87,9 +90,9 @@ String check;
             JSONArray ar = new JSONArray(resultmessage);
             for (int i = 0;i<ar.length();i++){
                 JSONObject root = ar.getJSONObject(i);
-                String img = root.getString("img");
+                String img = root.getString("bitmap");
                 String label = root.getString("label");
-                String level = root.getString("levl");
+                String level = root.getString("level");
                 /*byte[] b = Base64.decode(img,Base64.URL_SAFE |Base64.NO_WRAP);
                 Bitmap bits = BitmapFactory.decodeByteArray(b,0,b.length);
 

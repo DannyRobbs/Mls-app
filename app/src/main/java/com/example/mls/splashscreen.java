@@ -27,7 +27,7 @@ public class splashscreen extends AppCompatActivity {
         runnable = new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), GetStarted.class));
             }
         };
         handler = new Handler();
